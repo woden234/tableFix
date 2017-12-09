@@ -1,0 +1,65 @@
+<html>
+<body>
+<head>
+<style type="text/css">
+ table {
+		border-spacing:0;
+	}
+	tr td {
+		border: 1px solid black;
+	}
+#div{
+	max-height: 300px;
+	overflow: auto;
+     width: 50%;
+}
+#table{
+	width: 1080px;
+}
+
+</style>
+</head>
+<div id="div" >
+	<table id="table">
+		<thead><tr>
+			<td>3</td>
+			<td>45</td>
+			<td>55</td>
+			<td>212</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr><td>5555gg</td><td>dsdss</td><td>dddd</td><td>jjjh</td></tr>
+		<tr><td>gg</td><td>dsdss</td><td>dddd</td><td>jjjh</td></tr>
+		<tr><td>gg</td><td>dsdss</td><td>dddd</td><td>jjjh</td></tr>
+		<tr><td>gg</td><td>dsdss</td><td>dddd</td><td>jjjh</td></tr>
+		<tr><td>gg</td><td>dsdss</td><td>dddd</td><td>jjjh</td></tr>
+		<tr><td>gg</td><td>dsdss</td><td>dddd</td><td>jjjh</td></tr>
+		<tr><td>gg</td><td>dsdss</td><td>dddd</td><td>jjjh</td></tr>
+		<tr><td>gg</td><td>dsdss</td><td>dddd</td><td>jjjh</td></tr>
+		<tr><td>gg</td><td>dsdss</td><td>dddd</td><td>jjjh</td></tr>
+	</tbody>
+	<tfoot id="tfoot"><tr><td>合計</td>
+			<td>test</td>
+			<td>測試</td>
+			<td>也一樣</td></tr></tfoot>
+	</table>
+</div>
+<script type="text/javascript">
+    var t=function(){
+        var tableCont = document.querySelector('#div')
+        /**
+         * scroll handle
+         * @param {event} e -- scroll event
+         */
+        function scrollHandle (e){
+            var scrollTop = this.scrollTop;
+            this.querySelector('thead').style.transform = 'translateY(' + scrollTop + 'px)';
+            this.querySelector('tr').style.backgroundColor = '#eff2f1';
+        }
+        tableCont.addEventListener('scroll',scrollHandle)
+    };
+    window.onload=t();
+</script>
+</body>
+</html>
